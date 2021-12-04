@@ -132,25 +132,25 @@ class Messages:
         return messages
 
 
-cnx = connect(user="postgres", password="coderslab", host="localhost", database="workshop")
-cnx.autocommit = True
-cursor = cnx.cursor()
-
-newone = User('Ale', '123')
-newtwo = User('Kot', '666')
-newthree = User('Troll', 'uhhrao')
-
-newone.save_to_db(cursor)
-newtwo.save_to_db(cursor)
-newthree.save_to_db(cursor)
-
-print(User.load_user_by_username(cursor, 'Kot'))
-print(User.load_user_by_id(cursor, '1'))
-print(User.load_all_users(cursor))
-
-newthree.delete(cursor)
-
-print(User.load_all_users(cursor))
-
-cursor.close()
-cnx.close()
+# cnx = connect(user="postgres", password="coderslab", host="localhost", database="workshop")
+# cnx.autocommit = True
+# cursor = cnx.cursor()
+#
+# newone = User('Ale', '123')
+# newtwo = User('Kot', '666')
+# newthree = User('Troll', 'uhhrao')
+#
+# newone.save_to_db(cursor)
+# newtwo.save_to_db(cursor)
+# newthree.save_to_db(cursor)
+#
+# print(User.load_user_by_username(cursor, 'Kot'))
+# print(User.load_user_by_id(cursor, '1'))
+# print(User.load_all_users(cursor))
+#
+# newthree.delete(cursor)
+#
+# print(User.load_all_users(cursor))
+#
+# cursor.close()
+# cnx.close()
